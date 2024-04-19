@@ -1,0 +1,214 @@
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+// variables 
+$primaryColor : #4B53E4;
+$textColor: #2F515E;
+$orangeColor : #F6A915;
+$greenColor : #30B47A;
+$redColor : #D15036;
+
+
+// Style Css 
+body {
+
+    font-family: 'Montserrat', sans-serif;
+    background-image: url(../images/bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 105vmax;
+    background-position: top right;
+
+}
+
+
+.custom-nav {
+    .navbar-brand {
+        text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.62);
+
+        span {
+            color: $greenColor;
+            font-size: 2rem;
+            font-weight: 800;
+        }
+
+        span:nth-child(2) {
+            font-weight: 600;
+            color: $redColor;
+            margin-left: -.3rem;
+        }
+    }
+}
+
+.navbar-nav {
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.12);
+
+    a {
+        color: $textColor;
+        font-size: 1rem;
+        font-weight: 500;
+        transition: .5s ease;
+        margin-left: 5rem;
+
+        &:hover {
+            color: $redColor
+        }
+    }
+
+    div {
+        color: white;
+        font-weight: 400;
+        background-color: $redColor;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-top: .6em;
+        padding-bottom: .6em;
+        margin-left: 2rem;
+        border: 1px solid transparent;
+        transition: .5s ease;
+
+        &:hover {
+            color: $redColor;
+            background-color: white;
+            border: 1px solid $redColor;
+        }
+
+
+    }
+}
+
+.navbar-toggler {
+    background-color: $redColor;
+    border-color: 1px solid $redColor;
+    transition: .5s ease;
+
+    &:hover {
+        background-color: white;
+        border-color: 1px solid $redColor;
+    }
+}
+
+.show {
+    background-color: $primaryColor;
+    border-radius: 5px;
+    transition: 1s ease;
+    line-height: 2.3rem;
+
+    a {
+        color: white;
+        font-weight: 500;
+        width: 120%;
+        position: inline-block;
+        margin-left: 1rem;
+    }
+
+    .sign-up-button {
+        width: 100%;
+        margin-left: 0;
+
+    }
+}
+
+
+.main-text-title {
+    font-size: 4rem;
+    margin-top: 5rem;
+    color: white;
+    font-weight: 900;
+    line-height: .8;
+    padding-bottom: 1.3rem;
+
+    span:nth-child(2) {
+        font-weight: 400;
+    }
+}
+
+.main-text {
+    color: white;
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+
+.main-button {
+    background-color: $redColor;
+    color: white;
+    font-weight: 500;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-top: 2rem;
+    border: 1px solid $redColor;
+    transition: .5s ease;
+    text-shadow: none;
+
+    &:hover {
+        background-color: white;
+        color: $redColor;
+        border: 1px solid $redColor;
+        text-shadow: none;
+    }
+}
+
+@media screen and (max-width: 992px) {
+
+    // dark overlay body
+    .main-text-content {
+        margin-top: 0rem;
+        text-align: center;
+        justify-content: center;
+        text-shadow: 0px 0px 8px black;
+    }
+
+    .main-text-description {
+        text-align: center;
+        margin-bottom: 2rem;
+        /* Tambahkan margin bawah untuk jarak */
+    }
+
+    .main-button {
+
+        display: block;
+        margin-top: 1rem auto;
+        /* Mengatur margin untuk pemusatkan */
+    }
+
+    .main-text::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 120%;
+        background-color: rgba(0, 0, 0, 0.5);
+        /* Ubah warna dan opasitas sesuai kebutuhan */
+        z-index: -1;
+        transition: .5s ease;
+    }
+
+    /* Sesuaikan warna teks untuk dibaca di atas overlay */
+    .main-text-content,
+    .main-text-description,
+    .main-button {
+        color: white;
+        /* Sesuaikan warna teks agar terbaca dengan baik di atas overlay */
+    }
+
+    .footer svg{
+        display: none;
+    }
+    
+}
+
+.footer svg {
+    position: absolute;
+    margin-top:12rem;
+    width: 120%;
+    right: 0px;
+}
+  
+.footer span {
+    position: absolute;
+    margin-top: 30rem;
+    margin-left: 70%;
+    color: white;
+}
